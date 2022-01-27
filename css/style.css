@@ -1,0 +1,177 @@
+:root {
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%); }
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 34.4em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-size: 1.8rem;
+  font-family: sans-serif;
+  background-image: url("../images/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 2rem;
+  background-color: var(--very-light-gray); }
+  @media only screen and (max-width: 34.4em) {
+    body {
+      background-image: url("../images/bg-mobile-light.jpg"); } }
+
+.attribution {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--very-dark-grayish-blue);
+  width: fit-content;
+  margin: 10rem auto 0; }
+
+.attribution a {
+  color: purple; }
+
+.todo {
+  max-width: 50rem;
+  margin: 10vw auto;
+  display: flex;
+  flex-direction: column; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem; }
+  .header__logo {
+    color: #fff;
+    letter-spacing: 1rem;
+    text-transform: uppercase; }
+  .header__theme-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .4s; }
+
+.new-input {
+  background-color: var(--very-light-gray);
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2); }
+  .new-input input {
+    background-color: transparent;
+    border: none;
+    flex: 1; }
+  .new-input input:focus {
+    outline: none; }
+
+.check-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  border: 1px solid var(--dark-grayish-blue);
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: all .2s; }
+  .check-circle svg {
+    position: relative;
+    top: .1rem;
+    right: .5rem; }
+
+.list {
+  list-style: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .list__item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--very-light-gray);
+    border-bottom: 1px solid var(--dark-grayish-blue);
+    color: var(--very-dark-grayish-blue); }
+    .list__item:first-child {
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem; }
+    .list__item-text {
+      overflow-wrap: break-word;
+      flex: 1;
+      max-width: 40rem;
+      min-width: 10rem; }
+    .list__item svg {
+      margin-left: 1rem;
+      transition: all .2s;
+      cursor: pointer; }
+    .list__item svg:hover path {
+      fill: black; }
+  .list__details {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--dark-grayish-blue);
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem; }
+  .list__link {
+    color: inherit;
+    text-decoration: none; }
+    .list__link:not(:last-child) {
+      margin-left: 1rem; }
+  .list__clear-list {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer; }
+  .list__link:hover, .list__clear-list:hover {
+    color: var(--bright-blue);
+    transition: all .2s; }
+
+.current {
+  color: var(--bright-blue); }
+
+.footer {
+  text-align: center;
+  color: var(--dark-grayish-blue);
+  font-size: 1.4rem;
+  margin-top: 6rem; }
+
+.change-background-color {
+  background-color: var(--very-dark-grayish-blue);
+  transition: all 1s; }
+
+.change-text-color {
+  color: var(--very-light-gray);
+  transition: all 1s; }
+
+.change-background-image {
+  background-image: url("../images/bg-desktop-dark.jpg");
+  transition: all 1s; }
+  @media only screen and (max-width: 34.4em) {
+    .change-background-image {
+      background-image: url("../images/bg-mobile-dark.jpg"); } }
+
+.change-fill {
+  fill: var(--dark-grayish-blue); }
+
+.change-display {
+  display: none; }
+
+.circle-background-image {
+  background-image: linear-gradient(to right, #57ddff, #c058f3); }
+
+.line-through {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through; }
+
+.drag-enter {
+  opacity: .2; }
